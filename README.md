@@ -10,8 +10,8 @@ Project by
 
 ## Description
 
-- Hand on Demand is a fully responsive webapp where users can pin help requests to the map which helpers can filter through & apply to
-- When Applying to jobs, helpers can filter based on location, distance, and job category. They can then send a counter offer based on payment type and amount.
+- Hand on Demand is a fully responsive webapp where users can pin help requests to the map which helpers can filter through & apply
+- When Applying to jobs, helpers can filter based on location, distance, and job category. They can then apply as is or send a counter offer. This will initiate a message send to that user so they can then chat going forward
 - Clicking on a job the map will pan to the location of the job
 - Pins on the map are custom based on the category of the job
 - When booking a helper clients can message applicants in real time and view there previous jobs reviews before making a decision
@@ -38,7 +38,7 @@ Project by
 
 ## Setup
 
-Install dependencies withing the root, front-end and back-end folder with `npm install`.
+Install dependencies within the root, front-end and back-end folder with `npm install`.
 
 ## Creating The DB
 
