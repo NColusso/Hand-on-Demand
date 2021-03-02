@@ -10,6 +10,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const server = require("http").Server(app);
 const io = require("socket.io")(server, {
   cors: {
@@ -19,6 +20,8 @@ const io = require("socket.io")(server, {
 });
 
 const db = require("./db");
+
+app.use(express.static(path.join(__dirname, "client/build")));
 
 const users = require("./routes/users");
 const jobs = require("./routes/jobs");
@@ -85,7 +88,7 @@ module.exports = function application(ENV, actions = { updateJobs: () => {} }) {
   const getSocket = () => {
     return io.sockets;
   };
-  
+
   // PASS DATABASE AND ALL SOCKETS TO EXPRESS MIDDLEWEAR
   app.use("/api", users(db, getSocket));
   app.use("/api", jobs(db, getSocket));
